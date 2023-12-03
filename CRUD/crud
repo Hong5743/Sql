@@ -1,0 +1,20 @@
+Create (생성)
+  새로운 데이터를 추가하는 작업입니다.
+  -- 예시: 사용자 정보를 추가하는 경우
+  INSERT INTO users (username, email, password) VALUES ('john_doe', 'john@example.com', 'password123');
+
+Read (읽기)
+  데이터베이스에서 정보를 가져오는 작업입니다
+  -- 예시: 모든 사용자 정보를 조회하는 경우
+  SELECT * FROM users;
+
+Update (갱신)
+  기존 데이터의 값을 수정하는 작업입니다.
+  -- 예시: 사용자의 이메일 정보를 업데이트하는 경우
+  UPDATE users SET email = 'new_email@example.com' WHERE username = 'john_doe';
+
+Delete (삭제)
+  데이터베이스에서 정보를 삭제하는 작업입니다.
+  -- 예시: 특정 사용자 정보를 삭제하는 경우
+  DELETE FROM users WHERE username = 'john_doe';
+
