@@ -1,0 +1,7 @@
+select [조회할 열1 이름], [열2 dlfma],....,[열n 이름]
+from [조회할 테이블 이름]
+where 열 이름 between 최솟값 and 최댓값;
+
+ex)
+select * from emp
+where sal between 2000 and 3000;
