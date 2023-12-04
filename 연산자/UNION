@@ -1,0 +1,8 @@
+2개 이상의 SELECT문의 결과 값을 연결할 때 사용합니다.
+
+ex)
+select empno, ename, sal, deptno from emp
+where deptno = 10
+union
+select empno, ename, sal, deptno from emp
+where deptno = 20;
