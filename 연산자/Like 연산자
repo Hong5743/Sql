@@ -1,0 +1,23 @@
+Like 연산자는 이메일이나 게시판 제목 또는 내용 검색 기능처럼 일부 문자열이 포함된 데이터를 조회할 때 사용
+
+select * from emp
+where ename like '%S%';
+
+Like연산자와 함께 사용할 수 있는 와일드 카드는 _ 와 % 입니다.
+
+_: 어떤 값이든 상관없이 한 개의 문자 데이터를 의미
+%: 길이와 상관없이(문자 없는 경우도 포함) 모든 문자 데이터를 의미
+
+ex) 사원 이름의 두 번째 글자가 L인 사원만 출력
+select * from emp
+where ename like '_L%';
+
+ex2) 사원 이름에 AM이 포함되어 있는 사원 데이터만 출력하기
+select * from emp
+where ename like '%AM%';
+
+와일드 카드 문자가 데이터 일부일 경우
+
+ex3) A_A 데이터 출력하기
+select * from some_table
+where some_column like 'A\_A%' escape '\';
