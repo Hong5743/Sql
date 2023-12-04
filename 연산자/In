@@ -1,0 +1,9 @@
+select * from emp
+  where job = 'MANAGER'
+  where job = 'SALESMAN'
+  where job = 'CLERK';
+
+이게 아래와 같다
+
+select * from emp
+  where job in ('MANAGER', 'SALESMAN', 'CLERK');
