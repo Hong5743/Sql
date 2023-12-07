@@ -1,0 +1,23 @@
+CASE 문은 조건부 논리를 사용하여 값을 평가하고 조건에 따라 다른 결과를 반환하는 데 사용됨
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ...
+    ELSE default_result
+END
+
+condition1, condition2, ...: 각 조건을 평가하는 조건식
+result1, result2, ...: 각 조건이 참일 때 반환되는 결과 값
+default_result (선택적): 모든 조건이 거짓일 때 반환되는 기본값
+
+ex) 
+SELECT
+    column_name,
+    CASE
+        WHEN column_name = 'value1' THEN 'Result A'
+        WHEN column_name = 'value2' THEN 'Result B'
+        ELSE 'Default Result'
+    END AS Result
+FROM your_table;
+
+column_name의 값이 'value1'이면 'Result A'를 반환하고, 'value2'이면 'Result B'를 반환합니다. 그렇지 않은 경우에는 'Default Result'를 반환합니다
