@@ -1,0 +1,7 @@
+SELECT EMPNO, ENAME, COMM,
+  NVL2(COMM, 'O', 'X'),
+  NVL2(COMM, SAL * 12 + COMM, SAL*12) AS ANNSAL
+FROM EMP;
+
+NVL2(COMM, 'O', 'X') comm이 null이 아니면 O 반환, null이면 X 반환 
+NVL2(COMM, SAL * 12 + COMM, SAL*12) AS ANNSAL comm이 null 이 아니면 SAL * 12 + COMM 반환, null 이면 SAL*12 반환
